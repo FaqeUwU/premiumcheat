@@ -1,1 +1,24 @@
-
+char username[128] = "Faqe";
+char password[128] = "Deer";
+ 
+ImGui::InputText(_("##username"), username, IM_ARRAYSIZE(username), ImGuiInputTextFlags_AlwaysInsertMode);
+ImGui::InputText(_("##password"), password, IM_ARRAYSIZE(password), ImGuiInputTextFlags_Password | ImGuiInputTextFlags_AlwaysInsertMode);
+ 
+std::string user(username);
+std::string pass(password);
+ 
+if (ImGui::Button(ImVec2(50,20))){
+sendrequest->"http://xenforo.gandaa.lv/index.php/api/auth?login=" + user + "&password=" + pass
+}
+char username[128] = "";
+char password[128] = "";
+ 
+ImGui::InputText(_("##username"), username, IM_ARRAYSIZE(username), ImGuiInputTextFlags_AlwaysInsertMode);
+ImGui::InputText(_("##password"), password, IM_ARRAYSIZE(password), ImGuiInputTextFlags_Password | ImGuiInputTextFlags_AlwaysInsertMode);
+ 
+std::string user(username);
+std::string pass(password);
+ 
+if (ImGui::Button(ImVec2(50,20))){
+sendrequest->"http://xenforo.gandaa.lv/index.php/api/auth?login=" + user + "&password=" + pass
+}
